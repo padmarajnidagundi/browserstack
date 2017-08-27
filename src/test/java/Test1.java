@@ -1,3 +1,5 @@
+/// Simple program without any framework
+
 import junit.framework.TestCase;
 import org.junit.After;
 import org.junit.Before;

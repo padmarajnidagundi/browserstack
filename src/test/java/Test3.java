@@ -1,5 +1,4 @@
-//Code for how to integrate pc browser - to the browserstack
-
+//Code for how to integrate mobile and pc browser - to the browserstack
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Platform;
@@ -10,24 +9,27 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 import java.net.URL;
 
-public class Test2 {
+public class Test3 {
+
+        //browser stack login details
 
     public static final String USERNAME = "padmarajnidagund1";
     public static final String AUTOMATE_KEY = "s1dMwJ6ZxyKxJ7otBVhs";
     public static final String URL = "https://padmarajnidagund1:s1dMwJ6ZxyKxJ7otBVhs@hub-cloud.browserstack.com/wd/hub";
 
-    //public static final String URL = "https://" + USERNAME + ":" + AUTOMATE_KEY + "@hub-cloud.browserstack.com/wd/hub";
+
+         //public static final String URL = "https://" + USERNAME + ":" + AUTOMATE_KEY + "@hub-cloud.browserstack.com/wd/hub";
 
     public static void main(String[] args) throws Exception {
 
-        //PC - IE - Windows
 
         DesiredCapabilities caps = new DesiredCapabilities();
-        caps.setCapability("browser", "IE");
-        caps.setCapability("browser_version", "7.0");
-        caps.setCapability("os", "Windows");
-        caps.setCapability("os_version", "XP");
-        caps.setCapability("browserstack.debug", "true");
+
+        //mobile - Samsung Galaxy S7
+
+        caps.setCapability("device", "Samsung Galaxy S7");
+        caps.setCapability("realMobile", "true");
+        caps.setCapability("os_version", "6.0");
 
         // Test - open google and search for the string Padmaraj Nidagundi
 
